@@ -365,9 +365,9 @@ img {
 
 .contact-info > p {
   color: var(--on-surface-variant);
-  margin-bottom: var(--space-2xl);
-  line-height: 1.8;
-  font-size: 1.05rem;
+  margin-bottom: var(--space-lg);
+  line-height: 1.7;
+  font-size: 1rem;
 }
 
 .contact-detail {
@@ -389,6 +389,77 @@ img {
   stroke-linecap: round;
   stroke-linejoin: round;
   flex-shrink: 0;
+}
+
+/* --- Billing Info — Editorial Data Display --- */
+.billing {
+  margin-top: var(--space-sm);
+}
+
+.billing-header {
+  margin-bottom: var(--space-lg);
+}
+
+.billing-name {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--on-surface);
+  letter-spacing: -0.015em;
+  margin-bottom: 6px;
+}
+
+.billing-address {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  color: var(--on-surface-variant);
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.billing-address svg {
+  width: 16px;
+  height: 16px;
+  stroke: var(--primary);
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.billing-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md) var(--space-lg);
+}
+
+.billing-row {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.billing-row--full {
+  grid-column: 1 / -1;
+}
+
+.billing-label {
+  font-size: 0.688rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--outline-variant);
+}
+
+.billing-value {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--on-surface);
+  line-height: 1.5;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.005em;
 }
 
 .contact-form {
@@ -527,5 +598,10 @@ img {
 
   .contact-form {
     padding: var(--space-lg);
+  }
+
+  .billing-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
   }
 }
