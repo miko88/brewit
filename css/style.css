@@ -343,6 +343,180 @@ img {
   line-height: 1.7;
 }
 
+/* --- Use Cases — Tonal Layering --- */
+.use-cases {
+  padding: var(--space-4xl) 0;
+  background: var(--surface);
+}
+
+.use-cases-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-md);
+}
+
+.use-case-card {
+  background: var(--surface-container-lowest);
+  border-radius: var(--radius-xl);
+  padding: var(--space-2xl);
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.use-case-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 40px rgba(26, 27, 46, 0.06);
+}
+
+.use-case-card h3 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--on-surface);
+  margin-bottom: var(--space-xs);
+  letter-spacing: -0.01em;
+}
+
+.use-case-card p {
+  color: var(--on-surface-variant);
+  font-size: 0.938rem;
+  line-height: 1.7;
+}
+
+/* --- Process — Horizontal Flow --- */
+.process {
+  padding: var(--space-4xl) 0;
+  background: var(--surface-container-low);
+}
+
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-md);
+  position: relative;
+}
+
+.process-step {
+  background: var(--surface-container-lowest);
+  border-radius: var(--radius-xl);
+  padding: var(--space-xl);
+  position: relative;
+}
+
+.process-number {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--primary);
+  background: rgba(0, 63, 177, 0.08);
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  margin-bottom: var(--space-md);
+  font-variant-numeric: tabular-nums;
+}
+
+.process-step h3 {
+  font-size: 1.063rem;
+  font-weight: 700;
+  color: var(--on-surface);
+  margin-bottom: var(--space-xs);
+  letter-spacing: -0.01em;
+}
+
+.process-step p {
+  color: var(--on-surface-variant);
+  font-size: 0.875rem;
+  line-height: 1.65;
+}
+
+/* --- Technologies — Integration Chips --- */
+.tech {
+  padding: var(--space-4xl) 0;
+  background: var(--surface);
+}
+
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md);
+}
+
+.tech-category {
+  background: var(--surface-container-lowest);
+  border-radius: var(--radius-xl);
+  padding: var(--space-xl);
+}
+
+.tech-category h3 {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--primary);
+  margin-bottom: var(--space-md);
+}
+
+.tech-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tech-chip {
+  display: inline-block;
+  font-size: 0.813rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  color: var(--on-surface-variant);
+  background: var(--surface-container-highest);
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+}
+
+.tech-note {
+  margin-top: var(--space-lg);
+  font-size: 0.875rem;
+  color: var(--outline-variant);
+  font-style: italic;
+}
+
+/* --- About — Asymmetric Layout --- */
+.about {
+  padding: var(--space-4xl) 0;
+  background: var(--surface-container-low);
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 7fr 5fr;
+  gap: var(--space-3xl);
+  align-items: start;
+}
+
+.about-left h2 {
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  font-weight: 800;
+  color: var(--on-surface);
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.about-right p {
+  color: var(--on-surface-variant);
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: var(--space-md);
+}
+
+.about-right p:last-child {
+  margin-bottom: 0;
+}
+
+.stat-inline {
+  font-weight: 700;
+  color: var(--primary);
+  letter-spacing: -0.005em;
+}
+
 /* --- Contact — Tonal Depth --- */
 .contact {
   padding: var(--space-4xl) 0;
@@ -585,6 +759,29 @@ img {
     grid-template-columns: 1fr;
     gap: var(--space-2xl);
   }
+
+  .use-cases-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .process-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .tech-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .process-steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 480px) {
@@ -603,5 +800,11 @@ img {
   .billing-grid {
     grid-template-columns: 1fr;
     gap: var(--space-md);
+  }
+
+  .use-case-card,
+  .process-step,
+  .tech-category {
+    padding: var(--space-lg);
   }
 }
