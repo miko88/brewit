@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#003fb1"/>
+      <stop offset="100%" stop-color="#1a56db"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#f8f9ff"/>
+
+  <!-- Decorative gradient panel (right) -->
+  <rect x="820" y="0" width="380" height="630" fill="url(#grad)"/>
+
+  <!-- Geometric accent inside panel -->
+  <g opacity="0.18" fill="#ffffff">
+    <rect x="880" y="110" width="60" height="60" rx="6"/>
+    <rect x="960" y="110" width="60" height="60" rx="6"/>
+    <rect x="1040" y="110" width="60" height="60" rx="6"/>
+    <rect x="880" y="190" width="60" height="60" rx="6"/>
+    <rect x="960" y="190" width="60" height="60" rx="6"/>
+    <rect x="880" y="270" width="60" height="60" rx="6"/>
+  </g>
+
+  <!-- Primary label -->
+  <text x="96" y="180" font-family="Inter, system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="20" font-weight="700" fill="#003fb1" letter-spacing="3">SYSTÉMOVÉ INTEGRÁCIE &amp; API</text>
+
+  <!-- BrewIT wordmark -->
+  <text x="96" y="320" font-family="Inter, system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="128" font-weight="800" fill="#1a1b2e" letter-spacing="-5">Brew<tspan fill="#003fb1">IT</tspan></text>
+
+  <!-- Tagline -->
+  <text x="96" y="400" font-family="Inter, system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="34" font-weight="500" fill="#434654" letter-spacing="-0.5">Prepájame systémy. Tvoríme riešenia.</text>
+
+  <!-- Footer domain -->
+  <text x="96" y="550" font-family="Inter, system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="18" font-weight="700" fill="#003fb1" letter-spacing="4">BREWIT.SK</text>
+
+  <!-- Divider accent above footer -->
+  <rect x="96" y="490" width="48" height="3" fill="#003fb1" rx="1"/>
+</svg>

@@ -291,24 +291,43 @@ img {
   align-self: end;
 }
 
-.services-grid {
+.services-strip {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: var(--space-md);
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-xl);
 }
 
-.service-card {
-  background: var(--surface-container-lowest);
-  border-radius: var(--radius-xl);
-  padding: var(--space-2xl);
-  transition: box-shadow 0.3s, transform 0.3s;
+.service-pillar {
+  position: relative;
+  padding-top: var(--space-sm);
 }
 
-.service-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 40px rgba(26, 27, 46, 0.06);
+.service-pillar::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 28px;
+  height: 2px;
+  background: var(--primary);
+  border-radius: var(--radius-sm);
 }
 
+.service-pillar h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--on-surface);
+  margin-bottom: var(--space-xs);
+  letter-spacing: -0.01em;
+}
+
+.service-pillar p {
+  color: var(--on-surface-variant);
+  font-size: 0.875rem;
+  line-height: 1.65;
+}
+
+/* Service icon (used by Use Cases) */
 .service-icon {
   width: 52px;
   height: 52px;
@@ -328,19 +347,6 @@ img {
   stroke-width: 2;
   stroke-linecap: round;
   stroke-linejoin: round;
-}
-
-.service-card h3 {
-  font-size: 1.125rem;
-  font-weight: 700;
-  color: var(--on-surface);
-  margin-bottom: var(--space-xs);
-}
-
-.service-card p {
-  color: var(--on-surface-variant);
-  font-size: 0.938rem;
-  line-height: 1.7;
 }
 
 /* --- Use Cases — Tonal Layering --- */
@@ -751,8 +757,9 @@ img {
     gap: var(--space-sm);
   }
 
-  .services-grid {
+  .services-strip {
     grid-template-columns: 1fr;
+    gap: var(--space-lg);
   }
 
   .contact-wrapper {
@@ -779,6 +786,11 @@ img {
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
+  .services-strip {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-xl);
+  }
+
   .process-steps {
     grid-template-columns: repeat(2, 1fr);
   }
