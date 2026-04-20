@@ -72,6 +72,27 @@ img {
   display: block;
 }
 
+/* --- Skip Link (A11y) --- */
+.skip-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(-120%);
+  padding: 12px 20px;
+  background: var(--primary);
+  color: var(--on-primary);
+  font-size: 0.875rem;
+  font-weight: 600;
+  border-radius: 0 0 var(--radius-md) 0;
+  z-index: 1000;
+  transition: transform 0.2s;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+  outline: none;
+}
+
 /* --- Container --- */
 .container {
   width: 100%;
@@ -219,6 +240,23 @@ img {
   color: var(--on-surface-variant);
   line-height: 1.8;
   margin-bottom: var(--space-lg);
+}
+
+.hero-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: var(--space-md);
+}
+
+.hero-chip {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: var(--on-surface-variant);
+  background: var(--surface-container-high);
+  padding: 5px 11px;
+  border-radius: var(--radius-sm);
 }
 
 .btn {
@@ -648,6 +686,35 @@ img {
   padding: var(--space-2xl);
 }
 
+.form-error {
+  margin-bottom: var(--space-sm);
+  padding: 10px 14px;
+  background: rgba(220, 38, 38, 0.08);
+  color: #b91c1c;
+  font-size: 0.875rem;
+  border-radius: var(--radius-md);
+}
+
+.form-success {
+  background: var(--surface-container-low);
+  border-radius: var(--radius-xl);
+  padding: var(--space-2xl);
+}
+
+.form-success h3 {
+  font-size: 1.375rem;
+  font-weight: 800;
+  color: var(--on-surface);
+  letter-spacing: -0.02em;
+  margin: var(--space-xs) 0 var(--space-sm);
+}
+
+.form-success p {
+  color: var(--on-surface-variant);
+  font-size: 0.975rem;
+  line-height: 1.7;
+}
+
 .form-group {
   margin-bottom: var(--space-md);
 }
@@ -695,6 +762,34 @@ img {
 .contact-form .btn {
   width: 100%;
   margin-top: var(--space-sm);
+}
+
+/* --- Thank You — Confirmation Page --- */
+.thanks {
+  padding: 200px 0 var(--space-4xl);
+  min-height: calc(100vh - var(--header-height));
+  display: flex;
+  align-items: center;
+}
+
+.thanks-content {
+  max-width: 640px;
+}
+
+.thanks-content h1 {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 800;
+  color: var(--on-surface);
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin-bottom: var(--space-md);
+}
+
+.thanks-content p {
+  font-size: 1.05rem;
+  color: var(--on-surface-variant);
+  line-height: 1.7;
+  margin-bottom: var(--space-lg);
 }
 
 /* --- Footer — Subtle Separation --- */
@@ -801,10 +896,6 @@ img {
     font-size: 1.875rem;
   }
 
-  .service-card {
-    padding: var(--space-lg);
-  }
-
   .contact-form {
     padding: var(--space-lg);
   }
@@ -818,5 +909,17 @@ img {
   .process-step,
   .tech-category {
     padding: var(--space-lg);
+  }
+}
+
+/* --- Reduced Motion (A11y) --- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }

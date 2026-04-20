@@ -57,6 +57,8 @@
 </head>
 <body>
 
+  <a href="#main" class="skip-link">Skip to content</a>
+
   <!-- Header -->
   <header class="header" id="header">
     <div class="container">
@@ -76,7 +78,7 @@
     </div>
   </header>
 
-  <main>
+  <main id="main">
     <!-- Hero — Asymmetric -->
     <section class="hero">
       <div class="container">
@@ -88,6 +90,12 @@
           <div class="hero-right">
             <p>We help companies efficiently connect their systems through custom API integrations and process automation. Reliable and tailored to your needs.</p>
             <a href="#contact" class="btn btn-primary">Get in touch</a>
+            <div class="hero-chips" aria-label="Key technologies">
+              <span class="hero-chip">.NET</span>
+              <span class="hero-chip">C#</span>
+              <span class="hero-chip">Azure</span>
+              <span class="hero-chip">REST API</span>
+            </div>
           </div>
         </div>
       </div>
@@ -138,7 +146,7 @@
 
           <div class="use-case-card">
             <div class="service-icon">
-              <svg viewBox="0 0 24 24"><path d="M3 3h18v18H3z"/><path d="M3 9h18M9 21V9"/></svg>
+              <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3 3h18v18H3z"/><path d="M3 9h18M9 21V9"/></svg>
             </div>
             <h3>ERP &amp; e-shop integration</h3>
             <p>Automatic transfer of orders from the e-shop to the ERP system and two-way synchronization of stock and pricing.</p>
@@ -146,7 +154,7 @@
 
           <div class="use-case-card">
             <div class="service-icon">
-              <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+              <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
             </div>
             <h3>CRM integration</h3>
             <p>Connecting your CRM with billing, marketing tools and customer support so data flows without manual re-entry.</p>
@@ -154,7 +162,7 @@
 
           <div class="use-case-card">
             <div class="service-icon">
-              <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>
+              <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>
             </div>
             <h3>Accounting automation</h3>
             <p>Transferring invoices, payments and accounting entries between systems. Accurate data, no duplicate work.</p>
@@ -162,7 +170,7 @@
 
           <div class="use-case-card">
             <div class="service-icon">
-              <svg viewBox="0 0 24 24"><path d="M23 4v6h-6M1 20v-6h6"/><path d="M3.51 9a9 9 0 0114.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0020.49 15"/></svg>
+              <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M23 4v6h-6M1 20v-6h6"/><path d="M3.51 9a9 9 0 0114.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0020.49 15"/></svg>
             </div>
             <h3>Data synchronization between systems</h3>
             <p>Scheduled or real-time sync between different systems. Webhooks, events or scheduled jobs — whatever fits the project.</p>
@@ -283,7 +291,7 @@
               <div class="billing-header">
                 <div class="billing-name">BrewIT s. r. o.</div>
                 <div class="billing-address">
-                  <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
                   <span>Juraja Fándlyho 2195/38, 010 01 Žilina, Slovakia</span>
                 </div>
               </div>
@@ -322,8 +330,14 @@
               <label for="message">Message</label>
               <textarea id="message" name="message" required placeholder="Describe your project or question..."></textarea>
             </div>
+            <p class="form-error" role="alert" hidden></p>
             <button type="submit" class="btn btn-primary">Send message</button>
           </form>
+          <div class="form-success" role="status" hidden>
+            <span class="section-label">Submitted</span>
+            <h3>Thank you for your message.</h3>
+            <p>We've received it and will get back to you shortly.</p>
+          </div>
         </div>
       </div>
     </section>

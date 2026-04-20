@@ -57,6 +57,8 @@
 </head>
 <body>
 
+  <a href="#main" class="skip-link">Preskočiť na obsah</a>
+
   <!-- Header -->
   <header class="header" id="header">
     <div class="container">
@@ -76,7 +78,7 @@
     </div>
   </header>
 
-  <main>
+  <main id="main">
     <!-- Hero — Asymmetric -->
     <section class="hero">
       <div class="container">
@@ -88,6 +90,12 @@
           <div class="hero-right">
             <p>Pomáhame firmám efektívne prepojiť ich systémy cez custom API integrácie a automatizáciu procesov. Spoľahlivo a na mieru.</p>
             <a href="#kontakt" class="btn btn-primary">Kontaktujte nás</a>
+            <div class="hero-chips" aria-label="Kľúčové technológie">
+              <span class="hero-chip">.NET</span>
+              <span class="hero-chip">C#</span>
+              <span class="hero-chip">Azure</span>
+              <span class="hero-chip">REST API</span>
+            </div>
           </div>
         </div>
       </div>
@@ -138,7 +146,7 @@
 
           <div class="use-case-card">
             <div class="service-icon">
-              <svg viewBox="0 0 24 24"><path d="M3 3h18v18H3z"/><path d="M3 9h18M9 21V9"/></svg>
+              <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3 3h18v18H3z"/><path d="M3 9h18M9 21V9"/></svg>
             </div>
             <h3>ERP napojenie e-shopu</h3>
             <p>Automatické prenášanie objednávok z e-shopu do ERP systému a spätná synchronizácia skladov a cien.</p>
@@ -146,7 +154,7 @@
 
           <div class="use-case-card">
             <div class="service-icon">
-              <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+              <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
             </div>
             <h3>CRM integrácia</h3>
             <p>Napojenie CRM systému na fakturáciu, marketingové nástroje a zákaznícku podporu tak, aby dáta plynuli bez manuálneho prepisovania.</p>
@@ -154,7 +162,7 @@
 
           <div class="use-case-card">
             <div class="service-icon">
-              <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>
+              <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>
             </div>
             <h3>Automatizácia účtovníctva</h3>
             <p>Prenášanie faktúr, platieb a účtovných pohybov medzi systémami. Presné dáta, žiadne duplicitné práce.</p>
@@ -162,7 +170,7 @@
 
           <div class="use-case-card">
             <div class="service-icon">
-              <svg viewBox="0 0 24 24"><path d="M23 4v6h-6M1 20v-6h6"/><path d="M3.51 9a9 9 0 0114.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0020.49 15"/></svg>
+              <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M23 4v6h-6M1 20v-6h6"/><path d="M3.51 9a9 9 0 0114.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0020.49 15"/></svg>
             </div>
             <h3>Synchronizácia dát medzi systémami</h3>
             <p>Periodická alebo real-time synchronizácia medzi rôznymi systémami. Webhooky, eventy alebo plánované úlohy podľa potreby.</p>
@@ -283,7 +291,7 @@
               <div class="billing-header">
                 <div class="billing-name">BrewIT s. r. o.</div>
                 <div class="billing-address">
-                  <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
                   <span>Juraja Fándlyho 2195/38, 010 01 Žilina, Slovensko</span>
                 </div>
               </div>
@@ -322,8 +330,14 @@
               <label for="message">Správa</label>
               <textarea id="message" name="message" required placeholder="Popíšte váš projekt alebo otázku..."></textarea>
             </div>
+            <p class="form-error" role="alert" hidden></p>
             <button type="submit" class="btn btn-primary">Odoslať správu</button>
           </form>
+          <div class="form-success" role="status" hidden>
+            <span class="section-label">Odoslané</span>
+            <h3>Ďakujeme za vašu správu.</h3>
+            <p>Dostali sme ju a ozveme sa vám čoskoro.</p>
+          </div>
         </div>
       </div>
     </section>
