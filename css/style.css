@@ -695,6 +695,15 @@ img {
   border-radius: var(--radius-md);
 }
 
+/* Honeypot — hidden from people, filled in by bots */
+.form-hp {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 .form-success {
   background: var(--surface-container-low);
   border-radius: var(--radius-xl);
